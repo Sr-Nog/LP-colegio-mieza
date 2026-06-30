@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colégio Mieza | Berçário ao Ensino Fundamental II</title>
+    <meta name="description" content="No Colégio Mieza, seu filho é acolhido e respeitado em sua individualidade. Atendimento de Berçário até Fundamental II com Ensino Mackenzie e atendimento integral." />
+
+    <link rel="icon" type="image/png" href="assets/MIV/MIEZA LOGO 03.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/MIV/MIEZA LOGO 03.png" />
+
+    <link rel="stylesheet" href="assets/icon/flaticon_err.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/splide/splide.min.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/vendor/animate-wow/animate.min.css" />
+    <link rel="stylesheet" href="assets/vendor/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/custom-overrides.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ===== COLÉGIO MIEZA — BRAND COLORS ===== */
+      /* Branco 50% | Laranja #ff601b 30% | Azul #4e22dd 20% */
+      :root {
+        --mieza-orange: #ff601b;
+        --mieza-blue: #4e22dd;
+        --mieza-white: #ffffff;
+        --mieza-blue-dark: #3a18a8;
+        --mieza-orange-light: rgba(255,96,27,0.1);
+        --mieza-blue-light: rgba(78,34,221,0.1);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+      img { max-width: 100%; height: auto; }
+
+      /* ===== HEADER OVERRIDES ===== */
+      .ul-header-top { background: var(--mieza-blue) !important; }
+      .ul-header-top .ul-header-top-info,
+      .ul-header-top .ul-header-top-info span,
+      .ul-header-top .ul-header-top-info a { color: rgba(255,255,255,0.9) !important; }
+      .ul-header-top .ul-header-top-info i { color: var(--mieza-orange) !important; }
+      .ul-header-bottom { background: #fff !important; box-shadow: 0 2px 20px rgba(78,34,221,0.1) !important; }
+
+      /* ===== BANNER / HERO ===== */
+      .ul-banner { background: linear-gradient(135deg, #f5f3ff 0%, #ede9ff 60%, #fff7f5 100%) !important; }
+
+      /* ===== FOOTER ===== */
+      .ul-footer { background: var(--mieza-blue) !important; }
+      .ul-footer-about-txt { color: rgba(255,255,255,0.75) !important; }
+      .ul-footer-widget-title { color: #fff !important; }
+      .ul-footer-widget-links a,
+      .ul-footer-contact-info a { color: rgba(255,255,255,0.7) !important; }
+      .ul-footer-widget-links a:hover,
+      .ul-footer-contact-info a:hover { color: var(--mieza-orange) !important; }
+      .ul-footer-bottom { border-top: 1px solid rgba(255,255,255,0.15) !important; }
+      .copyright-txt { color: rgba(255,255,255,0.6) !important; }
+      .copyright-txt .colored { color: var(--mieza-orange) !important; }
+      .ul-footer-widget-address { color: rgba(255,255,255,0.7) !important; }
+      .ul-footer-contact-info-label { color: rgba(255,255,255,0.5) !important; }
+      .ul-footer-contact-info-address { color: rgba(255,255,255,0.8) !important; }
+
+      /* ===== BUTTONS ===== */
+      .btn-mieza-orange {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: var(--mieza-orange); color: #fff; border: 2px solid var(--mieza-orange);
+        padding: 14px 28px; border-radius: 12px; font-weight: 700; font-size: 15px;
+        text-decoration: none; transition: all .3s ease; cursor: pointer; font-family: 'Poppins', sans-serif;
+      }
+      .btn-mieza-orange:hover { background: var(--mieza-blue); border-color: var(--mieza-blue); color: #fff; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255,96,27,.35); }
+
+      .btn-mieza-blue {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: var(--mieza-blue); color: #fff; border: 2px solid var(--mieza-blue);
+        padding: 14px 28px; border-radius: 12px; font-weight: 700; font-size: 15px;
+        text-decoration: none; transition: all .3s ease; cursor: pointer; font-family: 'Poppins', sans-serif;
+      }
+      .btn-mieza-blue:hover { background: var(--mieza-orange); border-color: var(--mieza-orange); color: #fff; transform: translateY(-2px); }
+
+      /* ===== BADGE / TAG ===== */
+      .mieza-sub-title {
+        display: inline-block;
+        background: linear-gradient(135deg, rgba(255,96,27,.12), rgba(78,34,221,.12));
+        color: var(--mieza-orange); border: 1px solid rgba(255,96,27,.25);
+        padding: 6px 18px; border-radius: 50px; font-size: 13px; font-weight: 600;
+        letter-spacing: .4px; margin-bottom: 16px;
+      }
+
+      /* ===== BENEFIT CARDS ===== */
+      .benefit-card {
+        background: #fff; border-radius: 18px; padding: 32px 24px;
+        box-shadow: 0 4px 20px rgba(78,34,221,.07);
+        border: 2px solid transparent; transition: all .3s ease;
+        height: 100%; text-align: center;
+      }
+      .benefit-card:hover { border-color: var(--mieza-orange); transform: translateY(-5px); box-shadow: 0 14px 35px rgba(255,96,27,.15); }
+      .benefit-icon {
+        width: 72px; height: 72px;
+        background: linear-gradient(135deg, rgba(255,96,27,.12), rgba(78,34,221,.12));
+        border-radius: 18px; display: inline-flex; align-items: center; justify-content: center;
+        margin-bottom: 20px; font-size: 32px;
+      }
+      .benefit-card h3 { font-size: 17px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+      .benefit-card p { font-size: 14px; color: #666; line-height: 1.65; margin: 0; }
+
+      /* ===== DIFFERENTIAL CARDS ===== */
+      .diff-card {
+        background: #fff; border-radius: 14px; padding: 24px 28px;
+        margin-bottom: 18px; box-shadow: 0 4px 15px rgba(78,34,221,.07);
+        border-left: 4px solid var(--mieza-orange);
+        display: flex; gap: 18px; align-items: flex-start;
+        transition: all .3s ease;
+      }
+      .diff-card:hover { transform: translateX(5px); box-shadow: 0 8px 25px rgba(78,34,221,.12); }
+      .diff-icon {
+        width: 50px; height: 50px; flex-shrink: 0;
+        background: linear-gradient(135deg, var(--mieza-orange), var(--mieza-blue));
+        border-radius: 12px; display: flex; align-items: center; justify-content: center;
+        font-size: 22px;
+      }
+      .diff-card h3 { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 5px; }
+      .diff-card p { font-size: 14px; color: #666; margin: 0; line-height: 1.6; }
+
+      /* ===== SERVICE CARDS ===== */
+      .service-card {
+        background: #fff; border-radius: 18px; overflow: hidden;
+        box-shadow: 0 4px 20px rgba(78,34,221,.08);
+        border: 1px solid rgba(78,34,221,.08);
+        transition: all .3s ease; height: 100%;
+      }
+      .service-card:hover { transform: translateY(-7px); box-shadow: 0 18px 45px rgba(78,34,221,.15); }
+      .service-card-img {
+        height: 200px; display: flex; align-items: center;
+        justify-content: center; font-size: 64px; overflow: hidden; position: relative;
+      }
+      .service-card-img img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+      .service-card-body { padding: 26px; }
+      .service-card-body h3 { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+      .service-card-body p { font-size: 14px; color: #666; line-height: 1.65; margin-bottom: 18px; }
+      .service-tag { font-size: 12px; color: #666; display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+      .service-tag span:first-child { color: var(--mieza-orange); font-weight: 700; }
+      .btn-saiba-mais {
+        display: block; text-align: center; padding: 12px;
+        background: var(--mieza-orange); color: #fff; border-radius: 8px;
+        font-weight: 600; text-decoration: none; font-size: 14px; transition: background .3s;
+        margin-top: 16px;
+      }
+      .btn-saiba-mais:hover { background: var(--mieza-blue); color: #fff; }
+
+      /* ===== TESTIMONIAL CARDS ===== */
+      .testimonial-card {
+        background: #fff; border-radius: 18px; padding: 30px;
+        box-shadow: 0 4px 20px rgba(78,34,221,.08);
+        border: 1px solid rgba(78,34,221,.1); height: 100%; transition: all .3s ease;
+      }
+      .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 14px 35px rgba(78,34,221,.15); }
+      .stars { color: var(--mieza-orange); font-size: 18px; margin-bottom: 14px; letter-spacing: 2px; }
+      .testimonial-text { color: #444; font-size: 15px; line-height: 1.75; font-style: italic; margin: 0; }
+      .testimonial-author {
+        display: flex; align-items: center; gap: 12px;
+        margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(78,34,221,.1);
+      }
+      .author-avatar {
+        width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+        background: linear-gradient(135deg, var(--mieza-orange), var(--mieza-blue));
+        display: flex; align-items: center; justify-content: center;
+        color: #fff; font-weight: 700; font-size: 18px;
+      }
+
+      /* ===== COUNTDOWN ===== */
+      .countdown-wrap { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+      .countdown-item {
+        text-align: center; background: rgba(255,255,255,.12);
+        border: 2px solid rgba(255,255,255,.2); border-radius: 14px;
+        padding: 18px 22px; min-width: 82px;
+      }
+      .countdown-item .num { display: block; font-size: 38px; font-weight: 800; color: var(--mieza-orange); line-height: 1; }
+      .countdown-item .lbl { display: block; font-size: 12px; color: rgba(255,255,255,.7); margin-top: 5px; font-weight: 500; }
+
+      /* ===== PRICING CARDS ===== */
+      .pricing-card {
+        background: #fff; border: 2px solid rgba(78,34,221,.18);
+        border-radius: 20px; padding: 40px 32px;
+        box-shadow: 0 4px 20px rgba(78,34,221,.08); transition: all .3s ease; height: 100%;
+      }
+      .pricing-card:hover { transform: translateY(-6px); border-color: var(--mieza-orange); box-shadow: 0 18px 45px rgba(255,96,27,.2); }
+      .pricing-card.featured {
+        background: linear-gradient(135deg, var(--mieza-blue), #6a3aed);
+        border-color: var(--mieza-blue); transform: scale(1.03);
+        box-shadow: 0 10px 40px rgba(78,34,221,.3);
+      }
+      .pricing-card.featured:hover { transform: scale(1.03) translateY(-6px); box-shadow: 0 24px 55px rgba(78,34,221,.4); }
+
+      /* ===== CONTACT FORM ===== */
+      .form-wrap { background: #fff; border-radius: 22px; padding: 42px; box-shadow: 0 10px 50px rgba(78,34,221,.12); }
+      .form-field { margin-bottom: 20px; }
+      .form-field label { display: block; font-weight: 600; color: #333; margin-bottom: 8px; font-size: 14px; }
+      .form-field input,
+      .form-field textarea {
+        width: 100%; padding: 14px 18px; border: 2px solid #e5e7eb;
+        border-radius: 10px; font-size: 15px; font-family: 'Poppins', sans-serif;
+        outline: none; transition: border-color .3s; background: #fafafa; color: #333;
+      }
+      .form-field input:focus,
+      .form-field textarea:focus { border-color: var(--mieza-blue); background: #fff; }
+      .form-field textarea { resize: vertical; min-height: 100px; }
+      .terms-check { display: flex; align-items: flex-start; gap: 10px; margin-top: 6px; }
+      .terms-check input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--mieza-blue); flex-shrink: 0; }
+      .terms-check label { font-size: 13px; color: #666; line-height: 1.55; cursor: pointer; }
+      .terms-check a { color: var(--mieza-blue); }
+
+      /* ===== STATS BAR ===== */
+      .stats-item { text-align: center; padding: 28px 16px; }
+      .stats-num { font-size: 40px; font-weight: 800; color: var(--mieza-orange); display: block; line-height: 1; }
+      .stats-lbl { font-size: 13px; color: rgba(255,255,255,.75); margin-top: 6px; display: block; }
+
+      /* ===== URGENCY VAGAS BADGE ===== */
+      .vagas-badge {
+        display: inline-flex; align-items: center; gap: 5px;
+        background: var(--mieza-orange); color: #fff; padding: 3px 10px;
+        border-radius: 50px; font-size: 11px; font-weight: 600;
+        animation: blink 1.5s ease-in-out infinite;
+      }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.65} }
+
+      /* ===== SCROLL FADE-IN ===== */
+      .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+      .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+      /* ===== BANNER CTA PULSE ===== */
+      .cta-pulse { animation: ctaPulse 2.8s ease-in-out infinite; }
+      @keyframes ctaPulse {
+        0%,100% { box-shadow: 0 0 0 rgba(255,96,27,.25); }
+        50% { box-shadow: 0 10px 28px rgba(255,96,27,.45); }
+      }
+
+      /* ===== FLOATING WHATSAPP ===== */
+      .float-wa {
+        position: fixed; bottom: 28px; right: 28px; width: 60px; height: 60px;
+        background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 4px 20px rgba(37,211,102,.45); z-index: 9999; transition: all .3s ease;
+        animation: waPulse 2.2s ease-in-out infinite;
+      }
+      .float-wa:hover { transform: scale(1.12); box-shadow: 0 8px 32px rgba(37,211,102,.65); animation: none; }
+      .float-wa svg { width: 32px; height: 32px; fill: #fff; }
+      @keyframes waPulse {
+        0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,.45); }
+        50% { box-shadow: 0 4px 32px rgba(37,211,102,.7), 0 0 0 9px rgba(37,211,102,.12); }
+      }
+
+      /* ===== URGENCY BAR ===== */
+      .urgency-bar {
+        background: linear-gradient(90deg, var(--mieza-blue) 0%, #6a3aed 50%, var(--mieza-orange) 100%);
+        color: #fff; text-align: center; padding: 10px 20px;
+        font-weight: 600; font-size: 14px;
+      }
+      .urgency-bar a { color: #fff; text-decoration: underline; margin-left: 8px; }
+
+      /* ===== RESPONSIVE — TABLET (< 992px) ===== */
+      @media (max-width: 991px) {
+        /* Hero mascot: contém dentro da coluna */
+        .hero-mascot-img { width: 85% !important; max-width: 420px !important; }
+        /* Oculta os badge-cards flutuantes no hero */
+        .hero-float-badge { display: none !important; }
+        /* Imagem da seção Solução */
+        .solution-img-wrap img { max-width: 280px !important; }
+        /* Imagem dos Diferenciais */
+        .diff-img-wrap { padding-left: 0 !important; }
+        .diff-img-wrap img { max-width: 260px !important; }
+        /* Credential box nos diferenciais */
+        .diff-credential-box { display: none !important; }
+      }
+
+      /* ===== RESPONSIVE — MOBILE (< 768px) ===== */
+      @media (max-width: 768px) {
+        /* Urgency bar */
+        .urgency-bar { font-size: 12px; padding: 8px 14px; }
+        .urgency-bar a { display: block; margin: 4px 0 0; }
+
+        /* Tipografia */
+        .ul-banner-title { font-size: 24px !important; line-height: 1.3 !important; }
+        .ul-section-title { font-size: 21px !important; }
+        .ul-banner-descr { font-size: 15px !important; }
+        .ul-section-descr { font-size: 14px !important; }
+
+        /* Hero badges e CTA */
+        .ul-banner-txt div[style*="flex-wrap:wrap"] { gap: 7px !important; }
+        .ul-banner-txt a[style*="font-size:18px"] { font-size: 15px !important; padding: 14px 22px !important; }
+
+        /* Stats bar */
+        .stats-num { font-size: 26px !important; }
+        .stats-lbl { font-size: 11px !important; }
+        .stats-item { padding: 20px 8px; }
+
+        /* Cards de benefício */
+        .benefit-card { padding: 24px 16px; }
+        .benefit-icon { width: 60px; height: 60px; font-size: 26px; }
+
+        /* Cards de serviço */
+        .service-card-img { height: 180px; }
+        .service-card-body { padding: 20px; }
+
+        /* Diferenciais */
+        .diff-card { padding: 16px 18px; gap: 12px; }
+        .diff-icon { width: 44px; height: 44px; flex-shrink: 0; }
+
+        /* Galeria */
+        .gallery-item { height: 190px !important; }
+
+        /* Urgência / countdown */
+        .countdown-wrap { gap: 8px; }
+        .countdown-item { padding: 12px 12px; min-width: 62px; }
+        .countdown-item .num { font-size: 26px; }
+        .countdown-item .lbl { font-size: 11px; }
+
+        /* Vagas restantes */
+        div[style*="vagas restantes"] { padding: 18px 22px !important; }
+
+        /* Pricing */
+        .form-wrap { padding: 22px 16px; }
+        .pricing-card { padding: 24px 16px; }
+        .pricing-card.featured { transform: none; }
+
+        /* Seção de contato — ícones */
+        div[style*="width:50px;height:50px"] { width: 42px !important; height: 42px !important; font-size: 18px !important; }
+
+        /* Seção de urgência — vagas lado a lado vira coluna */
+        div[style*="justify-content:center;gap:20px"] { flex-direction: column; align-items: center; gap: 12px !important; }
+
+        /* Convênios */
+        .benefit-card h3 { font-size: 15px; }
+
+        /* Footer */
+        .ul-footer-top-wrapper { gap: 36px; }
+      }
+
+      /* ===== RESPONSIVE — SMALL (< 480px) ===== */
+      @media (max-width: 480px) {
+        .ul-banner-title { font-size: 21px !important; }
+        .stats-num { font-size: 22px !important; }
+        .countdown-item .num { font-size: 22px; }
+        .countdown-item { min-width: 54px; padding: 10px 8px; }
+        .hero-mascot-img { width: 95% !important; }
+        .btn-mieza-orange, .btn-mieza-blue { padding: 12px 20px; font-size: 14px; }
+      }
+
+      /* ===== HERO BANNER ROTATIVO ===== */
+      .hero-banner-section {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .hero-banner-swiper {
+        width: 100%;
+      }
+
+      .hero-slide {
+        position: relative;
+        min-height: 88vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .hero-slide-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .hero-slide-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          105deg,
+          rgba(14, 14, 35, 0.90) 0%,
+          rgba(14, 14, 35, 0.75) 45%,
+          rgba(14, 14, 35, 0.22) 75%,
+          rgba(14, 14, 35, 0.08) 100%
+        );
+      }
+
+      .hero-slide-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding: 120px 0 90px;
+      }
+
+      .hero-slide-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        color: #fff;
+        padding: 7px 18px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 22px;
+        backdrop-filter: blur(10px);
+        letter-spacing: 0.3px;
+      }
+
+      .hero-slide-title {
+        font-size: clamp(26px, 3.6vw, 58px);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.18;
+        margin-bottom: 20px;
+        max-width: 650px;
+      }
+
+      .hero-slide-title .hl-orange { color: #ff601b; }
+      .hero-slide-title .hl-blue   { color: #a78bfa; }
+
+      .hero-slide-desc {
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.88);
+        max-width: 540px;
+        line-height: 1.72;
+        margin-bottom: 30px;
+      }
+
+      .hero-slide-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 36px;
+      }
+
+      .hero-slide-badge {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.24);
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        backdrop-filter: blur(8px);
+      }
+
+      .hero-slide-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #ff601b;
+        color: #fff;
+        padding: 18px 36px;
+        border-radius: 14px;
+        font-weight: 700;
+        font-size: 17px;
+        text-decoration: none;
+        border: 2px solid #ff601b;
+        transition: all 0.3s ease;
+        animation: ctaPulse 2.8s ease-in-out infinite;
+      }
+
+      .hero-slide-cta:hover {
+        background: #4e22dd;
+        border-color: #4e22dd;
+        color: #fff;
+        transform: translateY(-2px);
+        animation-play-state: paused;
+      }
+
+      /* Instagram social pill */
+      .hero-social-pill {
+        position: absolute;
+        bottom: 36px;
+        right: 40px;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(10px);
+        padding: 10px 18px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .hero-social-pill:hover {
+        background: rgba(255, 255, 255, 0.22);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      /* Swiper overrides for hero */
+      .hero-banner-swiper .swiper-pagination {
+        bottom: 32px;
+      }
+
+      .hero-banner-swiper .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+        transition: all 0.35s ease;
+      }
+
+      .hero-banner-swiper .swiper-pagination-bullet-active {
+        width: 34px;
+        border-radius: 5px;
+        background: #ff601b;
+      }
+
+      .hero-banner-swiper .swiper-button-next,
+      .hero-banner-swiper .swiper-button-prev {
+        width: 52px;
+        height: 52px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 2px solid rgba(255, 255, 255, 0.28);
+        border-radius: 50%;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        color: #fff;
+        margin-top: -26px;
+      }
+
+      .hero-banner-swiper .swiper-button-next:hover,
+      .hero-banner-swiper .swiper-button-prev:hover {
+        background: #ff601b;
+        border-color: #ff601b;
+      }
+
+      .hero-banner-swiper .swiper-button-next::after,
+      .hero-banner-swiper .swiper-button-prev::after {
+        font-size: 17px;
+        font-weight: 800;
+      }
+
+      /* Mobile hero */
+      @media (max-width: 767.98px) {
+        .hero-slide {
+          min-height: 100svh;
+          align-items: flex-end;
+        }
+
+        .hero-slide-overlay {
+          background: linear-gradient(
+            180deg,
+            rgba(14, 14, 35, 0.08) 0%,
+            rgba(14, 14, 35, 0.45) 40%,
+            rgba(14, 14, 35, 0.92) 70%,
+            rgba(14, 14, 35, 0.97) 100%
+          );
+        }
+
+        .hero-slide-content {
+          padding: 40px 0 80px;
+        }
+
+        .hero-slide-title {
+          font-size: clamp(22px, 6vw, 32px);
+        }
+
+        .hero-slide-desc {
+          font-size: 15px;
+          margin-bottom: 22px;
+        }
+
+        .hero-slide-badges {
+          margin-bottom: 24px;
+        }
+
+        .hero-slide-cta {
+          font-size: 15px;
+          padding: 15px 24px;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .hero-banner-swiper .swiper-button-next,
+        .hero-banner-swiper .swiper-button-prev {
+          display: none;
+        }
+
+        .hero-social-pill {
+          bottom: auto;
+          top: 20px;
+          right: 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-slide-tag { font-size: 11px; padding: 6px 14px; }
+        .hero-slide-badge { font-size: 11px; padding: 4px 12px; }
+      }
+
+      /* Slides com banners desenhados — sem overlay */
+      .hero-slide--banner .hero-slide-overlay { display: none; }
+
+      /* Slide só com botão — empurra o CTA para baixo da arte do banner */
+      .hero-slide--cta-only {
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .hero-slide--cta-only .hero-slide-content {
+        padding: 0 0 80px;
+        width: 100%;
+      }
+      @media (max-width: 767.98px) {
+        .hero-slide--cta-only .hero-slide-content {
+          padding-bottom: 60px;
+        }
+      }
+
+      /* Versões mobile dos banners (adicionar 1-mobile.png … 5-mobile.png em assets/Banners/) */
+      @media (max-width: 767.98px) {
+        .hero-bg-b1 { background-image: url('assets/Banners/1-mobile.png') !important; background-position: center center !important; }
+        .hero-bg-b2 { background-image: url('assets/Banners/2-mobile.png') !important; background-position: center center !important; }
+        .hero-bg-b3 { background-image: url('assets/Banners/Banner Mackenzie mobile.png') !important; background-position: center center !important; }
+        .hero-bg-b4 { background-image: url('assets/Banners/4-mobile.png') !important; background-position: center center !important; }
+        .hero-bg-b5 { background-image: url('assets/Banners/5-mobile.png') !important; background-position: center center !important; }
+      }
+
+      /* ── Marquee de Parceiros ── */
+      .partners-marquee-outer {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+      .partners-marquee-outer::before,
+      .partners-marquee-outer::after {
+        content: '';
+        position: absolute;
+        top: 0; bottom: 0;
+        width: 100px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .partners-marquee-outer::before { left: 0;  background: linear-gradient(to right, #fff 0%, transparent 100%); }
+      .partners-marquee-outer::after  { right: 0; background: linear-gradient(to left,  #fff 0%, transparent 100%); }
+
+      .partners-marquee-track {
+        display: flex;
+        width: max-content;
+        animation: partners-scroll 24s linear infinite;
+      }
+      .partners-marquee-track:hover { animation-play-state: paused; }
+
+      .partners-marquee-set {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        padding: 0 24px;
+      }
+
+      .partners-divider {
+        width: 1px;
+        height: 40px;
+        background: rgba(78,34,221,.15);
+        flex-shrink: 0;
+      }
+
+      @keyframes partners-scroll {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+      }
+
+      @media (max-width: 768px) {
+        .partners-marquee-set { gap: 32px; }
+        .partners-marquee-outer::before,
+        .partners-marquee-outer::after { width: 48px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="preloader" id="preloader"><div class="loader"></div></div>
+
+    <!-- URGENCY BAR -->
+    <div class="urgency-bar">
+      🚨 Lista de espera aberta para Berçário e Maternal 2025 — <strong>Vagas Limitadas!</strong>
+      <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Vim%20pelo%20site%20e%20quero%20entrar%20na%20lista%20de%20espera%20para%20Ber%C3%A7%C3%A1rio%2FMaternal." target="_blank">Garantir vaga →</a>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="ul-sidebar">
+      <div class="ul-sidebar-header">
+        <div class="ul-sidebar-header-logo">
+          <a href="index.html"><img src="assets/MIV/MIEZA LOGO 01.png" alt="Colégio Mieza" class="logo" style="max-height:48px;width:auto;" /></a>
+        </div>
+        <button class="ul-sidebar-closer"><i class="flaticon-close"></i></button>
+      </div>
+      <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
+      <div>
+        <div class="ul-sidebar-txt-block">
+          <span class="title ul-sidebar-footer-title">Sobre Nós</span>
+          <p class="descr">O Colégio Mieza acredita que cada criança é única. Oferecemos um ambiente acolhedor, do Berçário ao Fundamental II, com Ensino Mackenzie e atendimento integral.</p>
+        </div>
+        <div class="ul-sidebar-txt-block">
+          <span class="title ul-sidebar-footer-title">Contato</span>
+          <p class="descr"><i class="flaticon-call"></i><a href="https://wa.me/15557582856" target="_blank">+1 (555) 758-2856</a></p>
+        </div>
+        <div class="ul-sidebar-txt-block">
+          <span class="title ul-sidebar-footer-title">E-mail</span>
+          <p class="descr"><i class="flaticon-envelope"></i><a href="mailto:secretaria@colegiomieza.com.br">secretaria@colegiomieza.com.br</a></p>
+        </div>
+      </div>
+      <div class="ul-sidebar-footer">
+        <span class="ul-sidebar-footer-title">Siga-nos</span>
+        <div class="ul-sidebar-footer-social">
+          <a href="#"><i class="flaticon-instagram"></i></a>
+          <a href="#"><i class="flaticon-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="ul-header">
+      <div class="ul-header-top">
+        <div class="ul-header-container">
+          <div class="row align-items-center gy-2">
+            <div class="col-md-7 col-sm-5">
+              <div class="ul-header-top-infos">
+                <span class="ul-header-top-info">
+                  <i class="flaticon-call" style="color:#ff601b"></i>
+                  <span class="txt">
+                    <span class="title" style="color:rgba(255,255,255,.7)">WhatsApp:</span>
+                    <a href="https://wa.me/15557582856" target="_blank" style="color:#fff;font-weight:600">+1 (555) 758-2856</a>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-5 col-7 d-none d-sm-block">
+              <div class="ul-header-top-infos justify-content-sm-end">
+                <span class="ul-header-top-info ul-header-top-email">
+                  <i class="flaticon-envelope" style="color:#ff601b"></i>
+                  <span class="txt">
+                    <span class="value"><a href="mailto:secretaria@colegiomieza.com.br" style="color:#fff">secretaria@colegiomieza.com.br</a></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ul-header-bottom ul-header-container to-be-sticky">
+        <div class="ul-header-bottom-content">
+          <div class="ul-header-bottom-left">
+            <div class="logo-container">
+              <a href="index.html" class="d-inline-block"><img src="assets/MIV/MIEZA LOGO 01.png" alt="Colégio Mieza" class="logo" style="max-height:52px;width:auto;" /></a>
+            </div>
+          </div>
+
+          <!-- Desktop nav -->
+          <nav class="d-none d-lg-flex" style="gap:28px;align-items:center;">
+            <a href="#beneficios" style="color:#1a1a2e;font-weight:500;text-decoration:none;font-size:14px;transition:color .2s" onmouseover="this.style.color='#ff601b'" onmouseout="this.style.color='#1a1a2e'">Benefícios</a>
+            <a href="#diferenciais" style="color:#1a1a2e;font-weight:500;text-decoration:none;font-size:14px;transition:color .2s" onmouseover="this.style.color='#ff601b'" onmouseout="this.style.color='#1a1a2e'">Diferenciais</a>
+            <a href="#servicos" style="color:#1a1a2e;font-weight:500;text-decoration:none;font-size:14px;transition:color .2s" onmouseover="this.style.color='#ff601b'" onmouseout="this.style.color='#1a1a2e'">Programas</a>
+            <a href="#galeria" style="color:#1a1a2e;font-weight:500;text-decoration:none;font-size:14px;transition:color .2s" onmouseover="this.style.color='#ff601b'" onmouseout="this.style.color='#1a1a2e'">Galeria</a>
+            <a href="#convenios" style="color:#1a1a2e;font-weight:500;text-decoration:none;font-size:14px;transition:color .2s" onmouseover="this.style.color='#ff601b'" onmouseout="this.style.color='#1a1a2e'">Convênios</a>
+            <a href="#contato" style="color:#1a1a2e;font-weight:500;text-decoration:none;font-size:14px;transition:color .2s" onmouseover="this.style.color='#ff601b'" onmouseout="this.style.color='#1a1a2e'">Contato</a>
+          </nav>
+
+          <div class="ul-header-bottom-right">
+            <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20agendar%20uma%20visita." target="_blank"
+              class="ul-btn"
+              style="background:#ff601b;border-color:#ff601b;color:#fff"
+              onmouseover="this.style.background='#4e22dd';this.style.borderColor='#4e22dd'"
+              onmouseout="this.style.background='#ff601b';this.style.borderColor='#ff601b'">
+              AGENDAR VISITA <i class="flaticon-top-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ===================================================
+           1. HERO BANNER ROTATIVO
+      =================================================== -->
+      <section class="hero-banner-section" id="inicio">
+        <div class="swiper hero-banner-swiper" id="heroBannerSwiper">
+          <div class="swiper-wrapper">
+
+            <!-- ── SLIDE 1 ── -->
+            <div class="swiper-slide">
+              <div class="hero-slide hero-slide--banner hero-slide--cta-only">
+                <div class="hero-slide-bg hero-bg-b3" style="background-image:url('assets/Banners/Mackenzie.png');background-position:center center;"></div>
+                <div class="hero-slide-overlay" style="display:none;"></div>
+                <div class="hero-slide-content">
+                  <div class="ul-header-container">
+                    <div style="text-align:center;">
+                      <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20agendar%20uma%20visita." target="_blank" class="hero-slide-cta">
+                        Quero agendar uma visita &#8594;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── SLIDE 2 ── -->
+            <div class="swiper-slide">
+              <div class="hero-slide">
+                <div class="hero-slide-bg hero-bg-b2" style="background-image:url('assets/Banners/2.png');background-position:center center;"></div>
+                <div class="hero-slide-overlay"></div>
+                <div class="hero-slide-content">
+                  <div class="ul-header-container">
+                    <div style="max-width:660px;">
+                      <span class="hero-slide-tag">Projetos Temáticos · Consciência Ambiental</span>
+                      <h1 class="hero-slide-title">
+                        Projetos que <span class="hl-orange">despertam</span> a curiosidade e o amor pelo aprendizado
+                      </h1>
+                      <p class="hero-slide-desc">
+                        Na Mieza, aprender vai além do livro didático. Cada projeto conecta a criança ao mundo real de forma divertida e significativa.
+                      </p>
+                      <div class="hero-slide-badges">
+                        <span class="hero-slide-badge">Projetos Temáticos</span>
+                        <span class="hero-slide-badge">Aprendizado Ativo</span>
+                        <span class="hero-slide-badge">Ensino Mackenzie</span>
+                      </div>
+                      <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20agendar%20uma%20visita." target="_blank" class="hero-slide-cta">
+                        Quero conhecer a escola &#8594;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── SLIDE 5 ── -->
+            <div class="swiper-slide">
+              <div class="hero-slide">
+                <div class="hero-slide-bg hero-bg-b1" style="background-image:url('assets/Banners/1.png');background-position:center center;"></div>
+                <div class="hero-slide-overlay"></div>
+                <div class="hero-slide-content">
+                  <div class="ul-header-container">
+                    <div style="max-width:660px;">
+                      <span class="hero-slide-tag">Maternal Mieza · Primeiros Passos</span>
+                      <h1 class="hero-slide-title">
+                        Cuidado e <span class="hl-orange">carinho</span> nos primeiros anos de vida
+                      </h1>
+                      <p class="hero-slide-desc">
+                        Nosso Maternal oferece um ambiente seguro, acolhedor e estimulante, com professoras preparadas para cada etapa do desenvolvimento do seu filho.
+                      </p>
+                      <div class="hero-slide-badges">
+                        <span class="hero-slide-badge">Maternal Mieza</span>
+                        <span class="hero-slide-badge">Ambiente Seguro</span>
+                        <span class="hero-slide-badge">Câmeras em Todos Ambientes</span>
+                      </div>
+                      <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Maternal." target="_blank" class="hero-slide-cta">
+                        Saiba mais sobre o Maternal &#8594;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── SLIDE 7 ── -->
+            <div class="swiper-slide">
+              <div class="hero-slide">
+                <div class="hero-slide-bg hero-bg-b4" style="background-image:url('assets/Banners/4.png');background-position:center center;"></div>
+                <div class="hero-slide-overlay"></div>
+                <div class="hero-slide-content">
+                  <div class="ul-header-container">
+                    <div style="max-width:660px;">
+                      <span class="hero-slide-tag">Escola de Tempo Integral · Rotina Acolhedora</span>
+                      <h1 class="hero-slide-title">
+                        Atendimento <span class="hl-orange">integral</span> com qualidade e segurança para sua família
+                      </h1>
+                      <p class="hero-slide-desc">
+                        Período integral com refeições, descanso supervisionado e atividades extracurriculares. Tranquilidade para os pais, alegria para as crianças.
+                      </p>
+                      <div class="hero-slide-badges">
+                        <span class="hero-slide-badge">Período Integral</span>
+                        <span class="hero-slide-badge">Refeições Incluídas</span>
+                        <span class="hero-slide-badge">+10 Atividades</span>
+                      </div>
+                      <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Atendimento%20Integral." target="_blank" class="hero-slide-cta">
+                        Conhecer o Período Integral &#8594;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── SLIDE 9 ── -->
+            <div class="swiper-slide">
+              <div class="hero-slide">
+                <div class="hero-slide-bg hero-bg-b5" style="background-image:url('assets/Banners/5.png');background-position:center center;"></div>
+                <div class="hero-slide-overlay"></div>
+                <div class="hero-slide-content">
+                  <div class="ul-header-container">
+                    <div style="max-width:660px;">
+                      <span class="hero-slide-tag">Gamefik · Escola Gameficada</span>
+                      <h1 class="hero-slide-title">
+                        Aprender em equipe de forma <span class="hl-orange">divertida</span> e <span class="hl-blue">desafiadora</span>
+                      </h1>
+                      <p class="hero-slide-desc">
+                        Com a plataforma Gamefik, tornamos o aprendizado uma aventura. As crianças colaboram, competem de forma saudável e evoluem juntas.
+                      </p>
+                      <div class="hero-slide-badges">
+                        <span class="hero-slide-badge">Escola Gameficada</span>
+                        <span class="hero-slide-badge">Trabalho em Equipe</span>
+                        <span class="hero-slide-badge">Gamefik</span>
+                      </div>
+                      <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20agendar%20uma%20visita." target="_blank" class="hero-slide-cta">
+                        Quero conhecer a escola &#8594;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Navegação -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- Instagram pill -->
+        <a href="https://www.instagram.com/colegiomieza?igsh=cmxuaXNpMmppazBv" target="_blank" class="hero-social-pill">
+          <i class="flaticon-instagram"></i> @colegiomieza
+        </a>
+      </section>
+
+      <!-- ===== STATS BAR ===== -->
+      <section style="background:#4e22dd;padding:36px 0;">
+        <div class="ul-container">
+          <div class="row gy-2">
+            <div class="col-6 col-md-3"><div class="stats-item"><span class="stats-num">30+</span><span class="stats-lbl">Anos de Experiência</span></div></div>
+            <div class="col-6 col-md-3"><div class="stats-item"><span class="stats-num">6m</span><span class="stats-lbl">Berçário a partir de 6 meses</span></div></div>
+            <div class="col-6 col-md-3"><div class="stats-item"><span class="stats-num">100%</span><span class="stats-lbl">Ensino Mackenzie</span></div></div>
+            <div class="col-6 col-md-3"><div class="stats-item"><span class="stats-num">10+</span><span class="stats-lbl">Atividades Extracurriculares</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FAIXA DE CREDENCIAIS / PARCEIROS ===== -->
+      <section style="background:#fff;padding:32px 0;border-bottom:1px solid rgba(78,34,221,.08);">
+        <p style="text-align:center;font-size:13px;font-weight:600;color:#aaa;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px;">Parceiros e Credenciais</p>
+        <div class="partners-marquee-outer">
+          <div class="partners-marquee-track">
+
+            <!-- ── cópia 1 ── -->
+            <div class="partners-marquee-set">
+              <img src="assets/MIV/Logo laranja Mackenzie.png" alt="Sistema Mackenzie de Ensino" loading="lazy"
+                style="height:70px;width:auto;opacity:.85;transition:opacity .3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'" />
+              <div class="partners-divider"></div>
+              <img src="assets/MIV/MIEZA LOGO 01.png" alt="Colégio Mieza" loading="lazy"
+                style="height:36px;width:auto;opacity:.85;transition:opacity .3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'" />
+              <div class="partners-divider"></div>
+              <div style="display:flex;align-items:center;gap:10px;background:rgba(78,34,221,.05);border:1px solid rgba(78,34,221,.1);border-radius:10px;padding:10px 18px;white-space:nowrap;">
+                <span style="font-size:22px;">🎓</span>
+                <span style="font-size:13px;font-weight:700;color:#4e22dd;">JEEP — Cultura Empreendedora<br/><span style="font-weight:500;color:#888;font-size:11px;">Programa Sebrae</span></span>
+              </div>
+              <div class="partners-divider"></div>
+              <img src="assets/MIV/Gamefik.jpg" alt="Gamefik" loading="lazy"
+                style="height:44px;width:auto;border-radius:8px;opacity:.85;transition:opacity .3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'" />
+              <div class="partners-divider"></div>
+              <img src="assets/MIV/Logo ClipEscola.png" alt="ClipEscola" loading="lazy"
+                style="height:36px;width:auto;opacity:.85;transition:opacity .3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'" />
+            </div>
+
+            <!-- ── cópia 2 (loop sem corte) ── -->
+            <div class="partners-marquee-set" aria-hidden="true">
+              <img src="assets/MIV/Logo laranja Mackenzie.png" alt="Sistema Mackenzie de Ensino" loading="lazy"
+                style="height:70px;width:auto;opacity:.85;transition:opacity .3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'" />
+              <div class="partners-divider"></div>
+              <img src="assets/MIV/MIEZA LOGO 01.png" alt="" loading="lazy"
+                style="height:36px;width:auto;opacity:.85;transition:opacity .3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'" />
+              <div class="partners-divider"></div>
+              <div style="display:flex;align-items:center;gap:10px;background:rgba(78,34,221,.05);border:1px solid rgba(78,34,221,.1);border-radius:10px;padding:10px 18px;white-space:nowrap;">
+                <span style="font-size:22px;">🎓</span>
+                <span style="font-size:13px;font-weight:700;color:#4e22dd;">JEEP — Cultura Empreendedora<br/><span style="font-weight:500;color:#888;font-size:11px;">Programa Sebrae</span></span>
+              </div>
+              <div class="partners-divider"></div>
+              <img src="assets/MIV/Gamefik.jpg" alt="" loading="lazy"
+                style="height:44px;width:auto;border-radius:8px;opacity:.85;transition:opacity .3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'" />
+              <div class="partners-divider"></div>
+              <img src="assets/MIV/Logo ClipEscola.png" alt="" loading="lazy"
+                style="height:36px;width:auto;opacity:.85;transition:opacity .3s;"
+                onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'" />
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- ===================================================
+           3. SOLUÇÃO
+      =================================================== -->
+      <section class="ul-1-video-call ul-inner-video-call ul-section-spacing pb-0" style="background:linear-gradient(135deg,#f5f3ff 0%,#ede9ff 100%);">
+        <div class="ul-2-container">
+          <div class="text-center" style="margin-bottom:32px;">
+            <span class="mieza-sub-title">Nossa Solução</span>
+          </div>
+          <div class="row row-cols-lg-2 row-cols-1 align-items-end gy-4">
+            <div class="col">
+              <div class="ul-inner-video-call-txt ul-section-spacing pt-0">
+                <h2 class="ul-section-title" style="color:#1a1a2e;">
+                  Uma escola criada para acolher e respeitar cada criança
+                </h2>
+                <p class="ul-section-descr" style="color:black">
+                  No Colégio Mieza, acreditamos que o aprendizado acontece quando a criança se sente segura, acolhida e valorizada em quem ela é.
+                </p>
+                <ul class="ul-inner-video-call-features ul-2-about-list">
+                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Ambiente acolhedor do Berçário ao Fundamental II</li>
+                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Turmas reduzidas para atenção individualizada</li>
+                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Ensino Mackenzie de excelência reconhecida</li>
+                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Contraturno com mais de 10 atividades extracurriculares</li>
+                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Cultura empreendedora com JEEP (Sebrae)</li>
+                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Escola Gameficada com a plataforma Gamefik</li>
+                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>ClipEscola: comunicação centralizada entre gestão, coordenação, professores e alunos</li>
+                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Ambiente monitorado por câmeras para total segurança</li>
+                </ul>
+                <div class="ul-inner-video-call-btns">
+                  <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20agendar%20uma%20visita." target="_blank"
+                    class="ul-btn btn-1"
+                    style="background:#ff601b;border-color:#ff601b;color:#fff"
+                    onmouseover="this.style.background='#4e22dd';this.style.borderColor='#4e22dd'"
+                    onmouseout="this.style.background='#ff601b';this.style.borderColor='#ff601b'">
+                    AGENDAR VISITA <i class="flaticon-arrow-up-right"></i>
+                  </a>
+                </div>
+                <p class="ul-section-descr" style="margin-top:20px;font-weight:700;color:#4e22dd;">
+                  Colégio Mieza — onde seu filho é visto, ouvido e amado.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-lg text-center mt-3 mt-lg-0">
+              <div class="solution-img-wrap" style="display:flex;align-items:flex-end;justify-content:center;padding-bottom:0;">
+                <img src="assets/Fotos/2.png" alt="Mascote Colégio Mieza"
+                  style="max-width:400px;width:100%;height:auto;filter:drop-shadow(0 16px 32px rgba(78,34,221,.2));" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           4. BENEFÍCIOS
+      =================================================== -->
+      <section class="ul-services ul-section-spacing" id="beneficios">
+        <div class="ul-container">
+          <div class="text-center" style="margin-bottom:16px;"><span class="mieza-sub-title">Nossos Benefícios</span></div>
+          <div class="ul-section-heading text-center justify-content-center" style="margin-bottom:50px;">
+            <div class="left">
+              <h2 class="ul-section-title" style="color:#1a1a2e;">Tudo que sua família precisa em um só lugar</h2>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon"><img src="assets/Fotos/Berçario.png" alt="" class="JEEP"/></div>
+              <h3>Bebês à Adolescentes</h3>
+              <p>Atendemos bebês a partir de 06 meses até os 14 anos, com cuidado especializado e carinho em cada fase do desenvolvimento.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon"><img src="assets/MIV/Logo Mackenzie M.png" alt="" class="Mackenzie"/></div>
+              <h3>Ensino Mackenzie</h3>
+              <p>Parceria com o renomado Sistema Mackenzie, garantindo qualidade e excelência acadêmica reconhecida em todo o Brasil.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon"><img src="assets/Fotos/Integral.png" alt="" class="integral"/></div>
+              <h3>Atendimento Integral</h3>
+              <p>Programação completa para que seus filhos permaneçam integralmente no colégio de forma segura, produtiva e estimulante.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon"><img src="assets/Fotos/Aulas extras.png" alt="" class="aulas extras"/></div>
+              <h3>Contraturno Completo</h3>
+              <p>Xadrez, balé, reforço nas tarefas, funcional, capoeira e oficinas de culinária, artesanato e massinha. Desenvolvimento pleno!</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon"><img src="assets/Fotos/JEEP - SEBRAE.jpeg" alt="" class="JEEP"/></div>
+              <h3>Cultura Empreendedora</h3>
+              <p>Programa JEEP (Sebrae) para desenvolver habilidades empreendedoras desde cedo, preparando as crianças para o futuro.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon"><img src="assets/Fotos/fonico.png" alt="" class="Fônico"/></div>
+              <h3>Método Fônico</h3>
+              <p>Metodologia eficaz de alfabetização comprovada cientificamente, garantindo que todas as crianças aprendam a ler com confiança.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon" style="background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.1);"><img src="assets/MIV/Gamefik.jpg" alt="Gamefik" style="width:100%;height:100%;object-fit:contain;border-radius:10px;"/></div>
+              <h3>Escola Gameficada com Gamefik</h3>
+              <p>Aprendizado que engaja! A plataforma Gamefik torna a educação mais divertida, motivadora e eficaz para cada aluno.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon" style="background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.1);"><img src="assets/MIV/Logo ClipEscola.png" alt="ClipEscola" style="width:100%;height:100%;object-fit:contain;padding:6px;"/></div>
+              <h3>ClipEscola — Comunicação Integrada</h3>
+              <p>Plataforma que centraliza toda a comunicação entre gestão, coordenação, professores e alunos, mantendo a família sempre informada.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon">📹</div>
+              <h3>Ambiente Monitorado</h3>
+              <p>Câmeras de monitoramento em todo o colégio garantindo a tranquilidade dos pais e a segurança das crianças em todo momento.</p>
+            </div></div>
+          </div>
+
+          <div style="text-align:center;margin-top:50px;">
+            <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20saber%20mais%20sobre%20os%20benef%C3%ADcios." target="_blank" class="btn-mieza-blue">
+              💬 Quero saber mais sobre os benefícios
+            </a>
+          </div>
+        </div>
+        <div class="ul-services-vectors">
+          <img src="assets/img/service-vector-1.svg" alt="" class="ul-services-vector vector-1 wow animate__fadeInLeft" />
+          <img src="assets/img/service-vector-2.svg" alt="" class="ul-services-vector vector-2 wow animate__fadeInRight" />
+        </div>
+      </section>
+
+      <!-- ===================================================
+           5. DIFERENCIAIS
+      =================================================== -->
+      <section class="ul-qualification ul-section-spacing" id="diferenciais" style="background:linear-gradient(135deg,#f5f3ff 0%,#ede9ff 100%);">
+        <div class="ul-container">
+          <div class="text-center" style="margin-bottom:16px;"><span class="mieza-sub-title">Diferenciais</span></div>
+          <div class="row gx-0 gy-4">
+
+            <div class="col-md-7">
+              <div class="ul-section-heading">
+                <div>
+                  <h2 class="ul-section-title" style="color:#1a1a2e;">Por que escolher o Colégio Mieza?</h2>
+                  <p style="color:#666;font-size:16px;margin-top:14px;margin-bottom:32px;">Somos mais do que uma escola. Somos um lar de aprendizado onde cada criança é especial.</p>
+                </div>
+              </div>
+
+              <div class="diff-card fade-up">
+                <div class="diff-icon">
+                  <img src="assets/Fotos/Site Mieza (2).png" alt="seta indicadora">
+                </div>
+                <div>
+                  <h3>Adaptação Cuidadosa na Escola</h3>
+                  <p>Processo de adaptação humanizado para que cada criança se sinta segura e bem-vinda desde o primeiro dia.</p>
+                </div>
+              </div>
+
+              <div class="diff-card fade-up">
+                <div class="diff-icon">
+                  <img src="assets/Fotos/Site Mieza (2).png" alt="seta indicadora">
+                </div>
+                <div>
+                  <h3>Diretora com mais de 30 anos de experiência</h3>
+                  <p>Nossa diretora possui mais de três décadas de experiência no ramo educacional, garantindo uma gestão de excelência.</p>
+                </div>
+              </div>
+
+              <div class="diff-card fade-up">
+                <div class="diff-icon">
+                  <img src="assets/Fotos/Site Mieza (2).png" alt="seta indicadora">
+                </div>
+                <div>
+                  <h3>Salas com Turmas Reduzidas</h3>
+                  <p>Salas de aula com turmas reduzidas para que cada aluno receba atenção e cuidado verdadeiramente personalizado.</p>
+                </div>
+              </div>
+
+              <div class="diff-card fade-up">
+                <div class="diff-icon">
+                  <img src="assets/Fotos/Site Mieza (2).png" alt="seta indicadora">
+                </div>
+                <div>
+                  <h3>Método Fônico para Alfabetização</h3>
+                  <p>Utilizamos o Método Fônico — comprovado cientificamente como a forma mais eficaz para alfabetizar com segurança.</p>
+                </div>
+              </div>
+
+              <div class="diff-card fade-up">
+                <div class="diff-icon">
+                  <img src="assets/Fotos/Site Mieza (2).png" alt="seta indicadora">
+                </div>
+                <div>
+                  <h3>Escola Gameficada com Gamefik</h3>
+                  <p>Somos uma escola gameficada! Utilizamos a plataforma Gamefik para tornar o aprendizado mais engajante, divertido e eficaz.</p>
+                </div>
+              </div>
+
+              <div class="diff-card fade-up">
+                <div class="diff-icon">
+                  <img src="assets/Fotos/Site Mieza (2).png" alt="seta indicadora">
+                </div>
+                <div>
+                  <h3>Ambiente 100% Monitorado</h3>
+                  <p>Câmeras em todos os ambientes do colégio para garantir a segurança das crianças e a tranquilidade das famílias.</p>
+                </div>
+              </div>
+
+              <div style="margin-top:32px;">
+                <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20falar%20com%20a%20equipe." target="_blank" class="btn-mieza-orange">
+                  FALE COM NOSSA EQUIPE
+                </a>
+              </div>
+            </div>
+
+            <!-- Right image — mascote + credencial Mackenzie -->
+            <div class="col-12 col-md-5 text-center mt-4 mt-md-0">
+              <div class="diff-img-wrap" style="padding-left:30px;display:flex;flex-direction:column;align-items:center;gap:24px;">
+                <img src="assets/Fotos/1.png" alt="Mascote Colégio Mieza"
+                  style="max-width:1000px;width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(78,34,221,.2));" loading="lazy" />
+                <div class="diff-credential-box" style="background:#fff;border-radius:16px;padding:20px 28px;box-shadow:0 4px 20px rgba(78,34,221,.1);width:100%;text-align:center;">
+                  <p style="font-size:12px;color:#aaa;font-weight:600;letter-spacing:.2px;text-transform:uppercase;margin-bottom:4px;">Parceiro oficial</p>
+                  <img src="assets/MIV/Logo laranja Mackenzie.png" alt="Sistema Mackenzie de Ensino"
+                    style="height:70px;width:auto;" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ul-qualification-vectors">
+          <img src="assets/img/qualification-vector-1.svg" alt="" class="ul-qualification-vector vector-1 wow animate__fadeInLeft" />
+          <img src="assets/img/qualification-vector-2.svg" alt="" class="ul-qualification-vector vector-2 wow animate__fadeInRight" />
+        </div>
+      </section>
+
+      <!-- ===================================================
+           6. PRODUTOS / SERVIÇOS
+      =================================================== -->
+      <section class="ul-section-spacing" id="servicos">
+        <div class="ul-container">
+          <div class="text-center" style="margin-bottom:16px;"><span class="mieza-sub-title">Nossos Programas</span></div>
+          <div class="ul-section-heading text-center justify-content-center" style="margin-bottom:50px;">
+            <div>
+              <h2 class="ul-section-title" style="color:#1a1a2e;">Do Berçário ao Fundamental II</h2>
+              <p style="color:#666;max-width:580px;margin:14px auto 0;font-size:16px;">Programas completos para cada fase do desenvolvimento da sua criança.</p>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="service-card fade-up">
+                <div class="service-card-img" style="background:linear-gradient(135deg,#4e22dd,#7c3aed);position:relative;overflow:hidden;">
+                  <img src="assets/Fotos/Do berçario ao fundamental/13.png" alt="Berçário e Maternal"
+                    style="height:250px;width:auto;position:absolute;bottom:0;right:10px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2));" loading="lazy" />
+                  <span style="position:relative;z-index:1;font-size:36px;align-self:flex-start;margin:16px 0 0 16px;"></span>
+                </div>
+                <div class="service-card-body">
+                  <h3>Berçário e Maternal</h3>
+                  <p>Cuidado especializado para bebês a partir de 8 meses até 3 anos. Ambiente seguro, estimulante e cheio de amor para os primeiros anos de vida.</p>
+                  <div class="service-tag"><span>✓</span>A partir de 6 meses</div>
+                  <div class="service-tag"><span>✓</span><span class="vagas-badge">🔴 Lista de espera</span></div>
+                  <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Quero%20saber%20mais%20sobre%20o%20Ber%C3%A7%C3%A1rio%20e%20Maternal." target="_blank" class="btn-saiba-mais">SAIBA MAIS</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="service-card fade-up">
+                <div class="service-card-img" style="background:linear-gradient(135deg,#ff601b,#ff8c42);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start;">
+                  <img src="assets/Fotos/Do berçario ao fundamental/15.png" alt="Sistema Mackenzie"
+                    style="height:250px;width:auto;position:absolute;bottom:0;right:10px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2));" loading="lazy" />
+                    <span style="font-size:36px;margin:16px 0 0 16px;"></span>
+                </div>
+                <div class="service-card-body">
+                  <h3>Educação Infantil e Fundamental</h3>
+                  <p>Ensino Mackenzie do Pré ao Fundamental II. Turmas reduzidas, Método Fônico de alfabetização e acompanhamento personalizado de cada aluno.</p>
+                  <div class="service-tag"><span>✓</span>Ensino Mackenzie</div>
+                  <div class="service-tag"><span>✓</span>Até 14 anos</div>
+                  <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Quero%20saber%20mais%20sobre%20a%20Educa%C3%A7%C3%A3o%20Infantil%20e%20Fundamental." target="_blank" class="btn-saiba-mais">SAIBA MAIS</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="service-card fade-up">
+                <div class="service-card-img" style="background:linear-gradient(135deg,#4e22dd,#ff601b);position:relative;overflow:hidden;">
+                  <img src="assets/Fotos/Contraturno.jpeg" alt="Contraturno"
+                    style="height:400px;width:auto;position:center;bottom:0;right:1px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.2));" loading="lazy" />
+                  <span style="position:relative;z-index:1;font-size:36px;align-self:flex-start;margin:16px 0 0 16px;"></span>
+                </div>
+                <div class="service-card-body">
+                  <h3>Contraturno e Atividades</h3>
+                  <p>Recreação, xadrez, funcional, balé, capoeira e auxilio nas tarefas escolares</p>
+                  <div class="service-tag"><span>✓</span>+5 atividades</div>
+                  <div class="service-tag"><span>✓</span>Atendimento integral</div>
+                  <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Quero%20saber%20mais%20sobre%20o%20Contraturno%20e%20Atividades." target="_blank" class="btn-saiba-mais">SAIBA MAIS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           GALERIA — BERÇÁRIO E MATERNAL
+      =================================================== -->
+      <section class="ul-section-spacing" id="galeria" style="background:#fff;">
+        <div class="ul-container">
+          <div class="text-center" style="margin-bottom:16px;"><span class="mieza-sub-title">Nosso Ambiente</span></div>
+          <div class="ul-section-heading text-center justify-content-center" style="margin-bottom:40px;">
+            <div>
+              <h2 class="ul-section-title" style="color:#1a1a2e;">Rotina diária do Berçário e Maternal</h2>
+              <p style="color:#666;max-width:580px;margin:14px auto 0;font-size:16px;">Momentos especiais que acontecem todos os dias no Colégio Mieza.</p>
+            </div>
+          </div>
+          <div class="row gy-3">
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" style="border-radius:16px;overflow:hidden;height:240px;">
+                <img src="assets/img/rotina-1.jpeg" alt="Berçário Mieza" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" style="border-radius:16px;overflow:hidden;height:240px;">
+                <img src="assets/img/rotina-2.jpeg" alt="Maternal Mieza" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" style="border-radius:16px;overflow:hidden;height:240px;">
+                <img src="assets/img/rotina-3.jpeg" alt="Rotina Mieza" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" style="border-radius:16px;overflow:hidden;height:240px;">
+                <img src="assets/Fotos da Rotina diária do berçario e maternal/Foto Bb1.jpeg" alt="Atividades Mieza" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" style="border-radius:16px;overflow:hidden;height:240px;">
+                <img src="assets/img/rotina-5.jpeg" alt="Crianças Mieza" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"/>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div style="background:linear-gradient(135deg,#4e22dd,#ff601b);border-radius:16px;height:240px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;">
+                <div style="font-size:36px;margin-bottom:12px;"></div>
+                <div style="color:#fff;font-weight:700;font-size:18px;margin-bottom:8px;">Siga-nos no Instagram</div>
+                <div style="color:rgba(255,255,255,.85);font-size:14px;margin-bottom:16px;">Acompanhe a rotina diária do nosso berçário e maternal</div>
+                <a href="https://www.instagram.com/colegiomieza/" target="_blank" style="background:#fff;color:#4e22dd;padding:10px 22px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;">@colegiomieza</a>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:36px;">
+            <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20agendar%20uma%20visita%20para%20conhecer%20o%20ambiente." target="_blank" class="btn-mieza-orange">
+              Quero conhecer o colégio pessoalmente
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           CONVÊNIOS E DESCONTOS
+      =================================================== -->
+      <section class="ul-section-spacing" id="convenios" style="background:linear-gradient(135deg,#f5f3ff 0%,#ede9ff 100%);">
+        <div class="ul-container">
+          <div class="text-center" style="margin-bottom:16px;"><span class="mieza-sub-title">Convênios e Descontos</span></div>
+          <div class="ul-section-heading text-center justify-content-center" style="margin-bottom:40px;">
+            <div>
+              <h2 class="ul-section-title" style="color:#1a1a2e;">Condições exclusivas para conveniados</h2>
+              <p style="color:#666;max-width:580px;margin:14px auto 0;font-size:16px;">Funcionários e associados das empresas parceiras têm desconto de 35% na mensalidade para 2026. Consulte-nos!</p>
+            </div>
+          </div>
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-3 col-md-6">
+              <div class="benefit-card fade-up" style="padding:28px 20px;">
+                <div style="font-size:40px;margin-bottom:14px;">🏭</div>
+                <h3 style="font-size:16px;">Arauco e Eldorado</h3>
+                <p>Desconto especial para colaboradores das fábricas.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="benefit-card fade-up" style="padding:28px 20px;">
+                <div style="font-size:40px;margin-bottom:14px;">🏢</div>
+                <h3 style="font-size:16px;">Sindicato das Indústrias de Três Lagoas</h3>
+                <p>Desconto especial para associados do sindicato.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="benefit-card fade-up" style="padding:28px 20px;">
+                <div style="font-size:40px;margin-bottom:14px;">🏛️</div>
+                <h3 style="font-size:16px;">Sindicato dos Servidores Públicos Municipais</h3>
+                <p>Desconto especial para servidores públicos municipais.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="benefit-card fade-up" style="padding:28px 20px;">
+                <div style="font-size:40px;margin-bottom:14px;">🏥</div>
+                <h3 style="font-size:16px;">Hospital Auxiliadora</h3>
+                <p>Desconto especial para colaboradores do Hospital Auxiliadora.</p>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:36px;">
+            <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Tenho%20conv%C3%AAnio%20e%20gostaria%20de%20saber%20sobre%20o%20desconto." target="_blank" class="btn-mieza-blue">
+              Tenho convênio — quero saber meu desconto
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           8. URGÊNCIA / ESCASSEZ
+      =================================================== -->
+      <section class="ul-section-spacing" id="urgencia" style="background:#4e22dd;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-50px;right:-100px;width:400px;height:400px;background:#ff601b;border-radius:50%;opacity:.1;filter:blur(60px);"></div>
+        <div style="position:absolute;bottom:-100px;left:-150px;width:500px;height:500px;background:#ff601b;border-radius:50%;opacity:.07;filter:blur(80px);"></div>
+
+        <div class="ul-container" style="position:relative;z-index:1;">
+          <div class="text-center" style="margin-bottom:16px;">
+            <span style="display:inline-block;background:rgba(255,96,27,.2);color:#ff601b;padding:6px 18px;border-radius:50px;font-size:13px;font-weight:600;border:1px solid rgba(255,96,27,.3);">⚠️ Atenção — Vagas Limitadas</span>
+          </div>
+          <div class="text-center" style="margin-bottom:40px;">
+            <h2 style="color:#fff;font-size:clamp(24px,3vw,40px);font-weight:800;margin-bottom:16px;">Lista de espera para Berçário e Maternal</h2>
+            <p style="color:rgba(255,255,255,.8);font-size:17px;max-width:600px;margin:0 auto;">As vagas para os menores são as mais concorridas. Não deixe para depois — garanta sua posição agora.</p>
+          </div>
+
+          <!-- Countdown -->
+          <div style="text-align:center;margin-bottom:40px;">
+            <p style="color:rgba(255,255,255,.65);font-size:14px;margin-bottom:16px;">⏰ Período de matrículas encerra em:</p>
+            <div class="countdown-wrap">
+              <div class="countdown-item"><span class="num" id="cd-days">00</span><span class="lbl">Dias</span></div>
+              <div class="countdown-item"><span class="num" id="cd-hours">00</span><span class="lbl">Horas</span></div>
+              <div class="countdown-item"><span class="num" id="cd-minutes">00</span><span class="lbl">Minutos</span></div>
+              <div class="countdown-item"><span class="num" id="cd-seconds">00</span><span class="lbl">Segundos</span></div>
+            </div>
+          </div>
+
+          <!-- Vagas restantes -->
+          <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:40px;">
+            <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:22px 32px;text-align:center;">
+              <div style="font-size:36px;font-weight:800;color:#ff601b;">3</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.8);margin-top:4px;">vagas restantes</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">Berçário 2026</div>
+            </div>
+            <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:22px 32px;text-align:center;">
+              <div style="font-size:36px;font-weight:800;color:#ff601b;">5</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.8);margin-top:4px;">vagas restantes</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px;">Maternal 2026</div>
+            </div>
+          </div>
+
+          <div style="text-align:center;">
+            <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Quero%20entrar%20na%20lista%20de%20espera%20para%20Ber%C3%A7%C3%A1rio%2FMaternal%202025." target="_blank"
+              class="cta-pulse"
+              style="display:inline-flex;align-items:center;gap:10px;background:#ff601b;color:#fff;padding:18px 40px;border-radius:14px;font-weight:700;font-size:18px;text-decoration:none;border:2px solid #ff601b;transition:all .3s;"
+              onmouseover="this.style.background='#fff';this.style.color='#ff601b';this.style.animationPlayState='paused'"
+              onmouseout="this.style.background='#ff601b';this.style.color='#fff';this.style.animationPlayState='running'">
+              Quero garantir minha vaga na lista de espera
+            </a>
+            <p style="color:rgba(255,255,255,.55);font-size:13px;margin-top:12px;">Resposta imediata pelo WhatsApp</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           9. PRECIFICAÇÃO
+      =================================================== -->
+      <section class="ul-section-spacing" id="matricula">
+        <div class="ul-container">
+          <div class="text-center" style="margin-bottom:16px;"><span class="mieza-sub-title">Investimento</span></div>
+          <div class="ul-section-heading text-center justify-content-center" style="margin-bottom:50px;">
+            <div>
+              <h2 class="ul-section-title" style="color:#1a1a2e;">Facilidades de Pagamento</h2>
+              <p style="color:#666;max-width:580px;margin:14px auto 0;font-size:16px;">Tornamos a educação de qualidade acessível para sua família.</p>
+            </div>
+          </div>
+
+          <div class="row gy-4 justify-content-center align-items-center">
+
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="pricing-card fade-up" style="text-align:center;">
+                <div style="font-size:44px;margin-bottom:16px;">📚</div>
+                <h3 style="font-size:20px;font-weight:700;color:#1a1a2e;margin-bottom:8px;">Material Didático</h3>
+                <p style="color:#ff601b;font-size:13px;font-weight:600;margin-bottom:22px;">Parcelamento facilitado</p>
+                <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:2px solid rgba(78,34,221,.1);">
+                  <span style="font-size:18px;font-weight:700;color:#4e22dd;">em até</span><br/>
+                  <span style="font-size:52px;font-weight:800;color:#4e22dd;line-height:1.1;">12x</span>
+                  <p style="color:#999;font-size:13px;margin:6px 0 0;">sem juros no cartão</p>
+                </div>
+                <ul style="list-style:none;padding:0;margin:0 0 28px;text-align:left;">
+                  <li style="padding:10px 0;display:flex;gap:10px;border-bottom:1px solid rgba(78,34,221,.08);"><span style="color:#ff601b;font-weight:700;">✓</span><span style="color:#555;font-size:14px;">Material Mackenzie incluso</span></li>
+                  <li style="padding:10px 0;display:flex;gap:10px;border-bottom:1px solid rgba(78,34,221,.08);"><span style="color:#ff601b;font-weight:700;">✓</span><span style="color:#555;font-size:14px;">Agenda escolar inclusa</span></li>
+                  <li style="padding:10px 0;display:flex;gap:10px;border-bottom:1px solid rgba(78,34,221,.08);"><span style="color:#ff601b;font-weight:700;">✓</span><span style="color:#555;font-size:14px;">Parcelamento em até 12x</span></li>
+                  <li style="padding:10px 0;display:flex;gap:10px;"><span style="color:#ff601b;font-weight:700;">✓</span><span style="color:#555;font-size:14px;">Convênios: Arauco, Sindicatos e Hospital Auxiliadora</span></li>
+                </ul>
+                <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20saber%20mais%20sobre%20valores%20e%20matr%C3%ADcula." target="_blank" class="btn-mieza-orange" style="width:100%;justify-content:center;">
+                  QUERO SABER OS VALORES <i class="flaticon-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2 (Featured) -->
+            <div class="col-lg-4 col-md-6">
+              <div class="pricing-card featured fade-up" style="text-align:center;position:relative;">
+                <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#ff601b;color:#fff;padding:4px 20px;border-radius:50px;font-size:12px;font-weight:700;white-space:nowrap;">MAIS PROCURADO</div>
+                <div style="font-size:44px;margin-bottom:16px;">🎓</div>
+                <h3 style="font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;">Matrícula + Mensalidade</h3>
+                <p style="color:rgba(255,255,255,.7);font-size:13px;margin-bottom:22px;">Condições especiais para novos alunos</p>
+                <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:2px solid rgba(255,255,255,.15);">
+                  <p style="color:rgba(255,255,255,.9);font-size:15px;margin:0;">Consulte nossa equipe para</p>
+                  <p style="color:#ff601b;font-size:22px;font-weight:800;margin:6px 0 0;">condições exclusivas</p>
+                </div>
+                <ul style="list-style:none;padding:0;margin:0 0 28px;text-align:left;">
+                  <li style="padding:10px 0;display:flex;gap:10px;border-bottom:1px solid rgba(255,255,255,.1);"><span style="color:#ff601b;font-weight:700;">✓</span><span style="color:rgba(255,255,255,.9);font-size:14px;">Desconto para irmãos</span></li>
+                  <li style="padding:10px 0;display:flex;gap:10px;border-bottom:1px solid rgba(255,255,255,.1);"><span style="color:#ff601b;font-weight:700;">✓</span><span style="color:rgba(255,255,255,.9);font-size:14px;">Convênios: Arauco, Sindicatos e Hospital Auxiliadora</span></li>
+                  <li style="padding:10px 0;display:flex;gap:10px;border-bottom:1px solid rgba(255,255,255,.1);"><span style="color:#ff601b;font-weight:700;">✓</span><span style="color:rgba(255,255,255,.9);font-size:14px;">Material didático parcelado 12x</span></li>
+                  <li style="padding:10px 0;display:flex;gap:10px;"><span style="color:#ff601b;font-weight:700;">✓</span><span style="color:rgba(255,255,255,.9);font-size:14px;">Atividades extracurriculares inclusas</span></li>
+                </ul>
+                <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Gostaria%20de%20uma%20proposta%20de%20matr%C3%ADcula." target="_blank"
+                  style="display:block;text-align:center;padding:14px;background:#ff601b;color:#fff;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;transition:all .3s;"
+                  onmouseover="this.style.background='#fff';this.style.color='#4e22dd'"
+                  onmouseout="this.style.background='#ff601b';this.style.color='#fff'">
+                  SOLICITAR PROPOSTA <i class="flaticon-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust bar -->
+          <div style="text-align:center;margin-top:48px;padding:28px;background:linear-gradient(135deg,rgba(78,34,221,.05),rgba(255,96,27,.05));border-radius:16px;border:1px solid rgba(78,34,221,.1);">
+            <p style="font-size:16px;font-weight:700;color:#1a1a2e;margin-bottom:6px;">Sem taxas ocultas. Transparência total.</p>
+            <p style="font-size:14px;color:#666;margin:0;">Todos os valores são apresentados com clareza na primeira conversa.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+           10. FORMULÁRIO DE CONVERSÃO
+      =================================================== -->
+      <section class="ul-section-spacing" id="contato" style="background:linear-gradient(135deg,#f5f3ff 0%,#ede9ff 100%);">
+        <div class="ul-container">
+          <div class="row gy-5 align-items-center">
+
+            <!-- Left info -->
+            <div class="col-lg-5">
+              <span class="mieza-sub-title">Fale Conosco</span>
+              <h2 style="font-size:clamp(24px,2.6vw,38px);font-weight:800;color:#1a1a2e;line-height:1.2;margin:14px 0 18px;">
+                Solicite uma Proposta para seu Filho
+              </h2>
+              <p style="color:#666;font-size:16px;line-height:1.7;margin-bottom:32px;">
+                Preencha o formulário e nossa equipe entrará em contato em até <strong style="color:#ff601b;">5 minutos</strong> para apresentar todas as opções disponíveis.
+              </p>
+
+              <div style="display:flex;flex-direction:column;gap:20px;">
+                <div style="display:flex;align-items:center;gap:16px;">
+                  <div style="width:50px;height:50px;background:#ff601b;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;">📱</div>
+                  <div>
+                    <div style="font-weight:700;color:#1a1a2e;font-size:15px;">WhatsApp</div>
+                    <a href="https://wa.me/15557582856" target="_blank" style="color:#4e22dd;font-size:14px;text-decoration:none;">+1 (555) 758-2856</a>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:16px;">
+                  <div style="width:50px;height:50px;background:#4e22dd;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;">✉️</div>
+                  <div>
+                    <div style="font-weight:700;color:#1a1a2e;font-size:15px;">E-mail</div>
+                    <a href="mailto:secretaria@colegiomieza.com.br" style="color:#4e22dd;font-size:14px;text-decoration:none;">secretaria@colegiomieza.com.br</a>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:16px;">
+                  <div style="width:50px;height:50px;background:linear-gradient(135deg,#ff601b,#4e22dd);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;">⏰</div>
+                  <div>
+                    <div style="font-weight:700;color:#1a1a2e;font-size:15px;">Atendimento</div>
+                    <div style="color:#666;font-size:14px;">Seg–Sex: 7h–18h | Sáb: 8h–12h</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right form -->
+            <div class="col-lg-7">
+              <div class="form-wrap">
+                <h3 style="font-size:20px;font-weight:700;color:#1a1a2e;margin-bottom:24px;">Preencha seus dados</h3>
+                <form id="miezaForm">
+                  <div class="row gy-1">
+                    <div class="col-md-6">
+                      <div class="form-field">
+                        <label for="fName">Nome completo *</label>
+                        <input type="text" id="fName" placeholder="Seu nome completo" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-field">
+                        <label for="fPhone">Telefone/WhatsApp *</label>
+                        <input type="tel" id="fPhone" placeholder="(00) 00000-0000" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-field">
+                        <label for="fEmail">E-mail *</label>
+                        <input type="email" id="fEmail" placeholder="seu@email.com" required />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-field">
+                        <label for="fCity">Cidade *</label>
+                        <input type="text" id="fCity" placeholder="Sua cidade" required />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-field">
+                        <label for="fMsg">Mensagem (opcional)</label>
+                        <textarea id="fMsg" placeholder="Conte-nos sobre seu filho, a série de interesse, ou qualquer dúvida..."></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="terms-check">
+                        <input type="checkbox" id="fTerms" required />
+                        <label for="fTerms">Concordo com a <a href="#">Política de Privacidade</a> e autorizo o contato via WhatsApp e e-mail.</label>
+                      </div>
+                    </div>
+                    <div class="col-12" style="margin-top:14px;">
+                      <button type="submit" class="btn-mieza-orange" style="width:100%;justify-content:center;padding:16px;font-size:17px;border:none;">
+                        ENVIAR VIA WHATSAPP
+                      </button>
+                      <p style="text-align:center;color:#aaa;font-size:13px;margin-top:10px;">Seus dados estão seguros e não serão compartilhados.</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="ul-footer">
+      <div class="ul-container">
+        <div class="ul-footer-top ul-section-spacing">
+          <div class="ul-footer-top-wrapper wow animate__fadeInUp">
+
+            <!-- Brand -->
+            <div class="ul-footer-about">
+              <a href="index.html" class="logo-wrapper">
+                <img src="assets/MIV/Logo Branca Colégio Mieza.png" alt="Colégio Mieza"
+                  style="max-height:100px;width:auto;filter:brightness(0) invert(1);" />
+              </a>
+              <p class="ul-footer-about-txt">
+                Colégio Mieza — onde seu filho é acolhido, respeitado e preparado para o futuro. Do Berçário ao Fundamental II com Ensino Mackenzie e atendimento integral.
+              </p>
+              <div class="footer-social-icons">
+                <a href="https://www.instagram.com/colegiomieza/" class="footer-icon"><i class="flaticon-instagram"></i></a>
+                <a href="https://www.facebook.com/colegiomieza?locale=pt_BR" class="footer-icon"><i class="flaticon-facebook"></i></a>
+                <a href="https://wa.me/15557582856" target="_blank" class="footer-icon">
+                  <img src="/assets/icon/wpp.svg" alt="WhatsApp" class="wpp-icon" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Contato -->
+            <div class="ul-footer-widget ul-footer-contact-widget">
+              <h3 class="ul-footer-widget-title">Contato</h3>
+              <div class="ul-footer-widget-links">
+                <p class="ul-footer-widget-address mb-0">Colégio Mieza</p>
+              </div>
+              <div class="ul-footer-contact-info">
+                <span class="ul-footer-contact-info-label">Email</span>
+                <span class="ul-footer-contact-info-address">
+                  <a href="mailto:secretaria@colegiomieza.com.br">secretaria@colegiomieza.com.br</a>
+                </span>
+              </div>
+              <div class="ul-footer-contact-info">
+                <span class="ul-footer-contact-info-label">WhatsApp</span>
+                <span class="ul-footer-contact-info-address">
+                  <a href="https://wa.me/15557582856" target="_blank">+1 (555) 758-2856</a>
+                </span>
+              </div>
+            </div>
+
+            <!-- Navegação -->
+            <div class="ul-footer-widget">
+              <h3 class="ul-footer-widget-title">Navegação</h3>
+              <div class="ul-footer-widget-links">
+                <a href="#beneficios">Benefícios</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#servicos">Programas</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#convenios">Convênios</a>
+                <a href="#matricula">Matrícula</a>
+                <a href="#contato">Fale Conosco</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Rodapé strip de parceiros -->
+        <div style="border-top:1px solid rgba(255,255,255,.12);padding:5px 0;margin-top:0;">
+          <img src="assets/MIV/Logo parceiros branca.png" alt="Parceiros Colégio Mieza"
+            style="width:50%;max-width:600px;display:block;margin:0 auto;opacity:.7;filter:brightness(0) invert(1);" loading="lazy" />
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="ul-footer-bottom">
+          <div class="row gy-2">
+            <div class="col-12 text-start">
+              <p class="copyright-txt" style="margin-bottom:4px;">
+                &copy; <span class="colored">Colégio Mieza</span>
+                <script>document.write(new Date().getFullYear());</script>.
+                Todos os direitos reservados.
+              </p>
+              <div class="ul-footer-widget-links">
+                <a href="https://www.instagram.com/blessmktestrategico/">Desenvolvido por BlessX</a>
+              </div>  
+              <a href="#" class="footer-privacy-link" style="display:inline-block;margin-top:0;color:rgba(255,255,255,.45);">Política de Privacidade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+      class="float-wa" target="_blank" rel="noopener noreferrer" aria-label="Fale com o Colégio Mieza no WhatsApp">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2.81c-7.3 0-13.23 5.93-13.23 13.23 0 2.33.61 4.6 1.78 6.6l-1.9 6.94 7.11-1.86c1.92 1.05 4.09 1.6 6.24 1.6 7.3 0 13.23-5.93 13.23-13.23S23.3 2.81 16 2.81zm0 23.85c-1.83 0-3.64-.47-5.24-1.35l-.38-.21-4.22 1.11 1.13-4.12-.25-.4a10.3 10.3 0 0 1-1.57-5.45c0-5.69 4.63-10.32 10.32-10.32S26.32 10.95 26.32 16.64 21.69 26.66 16 26.66zm5.86-7.62c-.32-.16-1.86-.92-2.15-1.02-.29-.11-.5-.16-.71.16-.21.32-.82 1.02-1 1.23-.18.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.56a9.5 9.5 0 0 1-1.77-2.18c-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.55-.18-.01-.4-.01-.61-.01-.21 0-.55.08-.84.4-.29.32-1.1 1.07-1.1 2.61 0 1.54 1.12 3.03 1.28 3.24.16.21 2.19 3.34 5.31 4.69.74.32 1.32.51 1.77.66.74.24 1.4.21 1.93.13.59-.09 1.86-.76 2.13-1.5.26-.74.26-1.38.18-1.51-.08-.13-.29-.21-.61-.37z" fill="currentColor" />
+      </svg>
+    </a>
+
+    <!-- Libraries JS -->
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/splide/splide.min.js"></script>
+    <script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/animate-wow/wow.min.js"></script>
+    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+    <script src="assets/vendor/slim-select/slimselect.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/progressbar.js"></script>
+
+    <script>
+      // ===== HERO BANNER ROTATIVO =====
+      (function () {
+        new Swiper('#heroBannerSwiper', {
+          loop: true,
+          speed: 900,
+          effect: 'fade',
+          fadeEffect: { crossFade: true },
+          autoplay: {
+            delay: 5500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          pagination: {
+            el: '#heroBannerSwiper .swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '#heroBannerSwiper .swiper-button-next',
+            prevEl: '#heroBannerSwiper .swiper-button-prev',
+          },
+          keyboard: { enabled: true },
+        });
+      })();
+
+      // ===== COUNTDOWN TIMER =====
+      (function () {
+        var target = new Date();
+        target.setDate(target.getDate() + 30);
+        target.setHours(23, 59, 59, 0);
+        function tick() {
+          var diff = target.getTime() - Date.now();
+          if (diff <= 0) { return; }
+          var d = Math.floor(diff / 86400000);
+          var h = Math.floor((diff % 86400000) / 3600000);
+          var m = Math.floor((diff % 3600000) / 60000);
+          var s = Math.floor((diff % 60000) / 1000);
+          document.getElementById('cd-days').textContent = String(d).padStart(2,'0');
+          document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+          document.getElementById('cd-minutes').textContent = String(m).padStart(2,'0');
+          document.getElementById('cd-seconds').textContent = String(s).padStart(2,'0');
+        }
+        tick();
+        setInterval(tick, 1000);
+      })();
+
+      // ===== PHONE MASK =====
+      (function () {
+        var el = document.getElementById('fPhone');
+        if (!el) return;
+        el.addEventListener('input', function (e) {
+          var v = e.target.value.replace(/\D/g, '');
+          if (v.length <= 2) v = v.length ? '(' + v : '';
+          else if (v.length <= 7) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+          else v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7,11);
+          e.target.value = v;
+        });
+      })();
+
+      // ===== CONTACT FORM → WHATSAPP =====
+      (function () {
+        var form = document.getElementById('miezaForm');
+        if (!form) return;
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var name  = document.getElementById('fName').value.trim();
+          var phone = document.getElementById('fPhone').value.trim();
+          var email = document.getElementById('fEmail').value.trim();
+          var city  = document.getElementById('fCity').value.trim();
+          var msg   = document.getElementById('fMsg').value.trim();
+          var terms = document.getElementById('fTerms').checked;
+          if (!name || !phone || !email || !city) { alert('Por favor, preencha todos os campos obrigatórios.'); return; }
+          if (!terms) { alert('Por favor, aceite a Política de Privacidade para continuar.'); return; }
+          var text = 'Olá, COLÉGIO MIEZA! Vim através do site.\n\n'
+            + '*Nome:* ' + name + '\n'
+            + '*Telefone:* ' + phone + '\n'
+            + '*E-mail:* ' + email + '\n'
+            + '*Cidade:* ' + city
+            + (msg ? '\n*Mensagem:* ' + msg : '');
+          window.open('https://wa.me/15557582856?text=' + encodeURIComponent(text), '_blank');
+        });
+      })();
+
+      // ===== SCROLL FADE-IN =====
+      (function () {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-up').forEach(function (el) { obs.observe(el); });
+      })();
+    </script>
+  </body>
+</html>
