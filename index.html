@@ -226,6 +226,11 @@
         animation: blink 1.5s ease-in-out infinite;
       }
       @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.65} }
+      .novidade-badge {
+        display: inline-flex; align-items: center; gap: 5px;
+        background: var(--mieza-blue); color: #fff; padding: 3px 10px;
+        border-radius: 50px; font-size: 11px; font-weight: 600;
+      }
 
       /* ===== SCROLL FADE-IN ===== */
       .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
@@ -1028,7 +1033,7 @@
                   <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Ambiente acolhedor do Berçário ao Fundamental II</li>
                   <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Turmas reduzidas para atenção individualizada</li>
                   <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Ensino Mackenzie de excelência reconhecida</li>
-                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Contraturno com mais de 10 atividades extracurriculares</li>
+                  <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Contraturno com mais de 10 atividades — do balé ao jiu-jitsu e informática com IA</li>
                   <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Cultura empreendedora com JEEP (Sebrae)</li>
                   <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>Escola Gameficada com a plataforma Gamefik</li>
                   <li><i class="flaticon-right-arrow" style="color:#ff601b"></i>ClipEscola: comunicação centralizada entre gestão, coordenação, professores e alunos</li>
@@ -1092,7 +1097,7 @@
             <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
               <div class="benefit-icon"><img src="assets/Fotos/Aulas extras.png" alt="" class="aulas extras"/></div>
               <h3>Contraturno Completo</h3>
-              <p>Xadrez, balé, reforço nas tarefas, funcional, capoeira e oficinas de culinária, artesanato e massinha. Desenvolvimento pleno!</p>
+              <p>Xadrez, balé, funcional, capoeira, jiu-jitsu e defesa pessoal, informática com IA, reforço nas tarefas e oficinas de culinária, artesanato e massinha. Desenvolvimento pleno!</p>
             </div></div>
 
             <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
@@ -1111,6 +1116,24 @@
               <div class="benefit-icon" style="background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.1);"><img src="assets/MIV/Gamefik.jpg" alt="Gamefik" style="width:100%;height:100%;object-fit:contain;border-radius:10px;"/></div>
               <h3>Escola Gameficada com Gamefik</h3>
               <p>Aprendizado que engaja! A plataforma Gamefik torna a educação mais divertida, motivadora e eficaz para cada aluno.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon">🤖</div>
+              <h3>Informática com Inteligência Artificial</h3>
+              <p>Aulas de informática com uso de Inteligência Artificial, preparando os alunos para as ferramentas e profissões do futuro com responsabilidade.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon">🥋</div>
+              <h3>Jiu-jitsu e Defesa Pessoal</h3>
+              <p>Disciplina, respeito, autoconfiança e condicionamento físico. Uma atividade que forma o corpo e o caráter dentro do contraturno.</p>
+            </div></div>
+
+            <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
+              <div class="benefit-icon">⚽</div>
+              <h3>Escolinha de Futebol <span class="novidade-badge">Novidade 2027</span></h3>
+              <p>Nossa escolinha de futebol está de volta em 2027! Trabalho em equipe, coordenação e espírito esportivo para as crianças que amam a bola.</p>
             </div></div>
 
             <div class="col-lg-4 col-md-6"><div class="benefit-card fade-up">
@@ -1301,9 +1324,10 @@
                 </div>
                 <div class="service-card-body">
                   <h3>Contraturno e Atividades</h3>
-                  <p>Recreação, xadrez, funcional, balé, capoeira e auxilio nas tarefas escolares</p>
-                  <div class="service-tag"><span>✓</span>+5 atividades</div>
+                  <p>Recreação, xadrez, funcional, balé, capoeira, jiu-jitsu e defesa pessoal, informática com IA e auxílio nas tarefas escolares.</p>
+                  <div class="service-tag"><span>✓</span>+8 atividades</div>
                   <div class="service-tag"><span>✓</span>Atendimento integral</div>
+                  <div class="service-tag"><span>✓</span><span class="novidade-badge">⚽ Escolinha de futebol volta em 2027</span></div>
                   <a href="https://wa.me/15557582856?text=Ol%C3%A1%2C%20Col%C3%A9gio%20Mieza!%20Quero%20saber%20mais%20sobre%20o%20Contraturno%20e%20Atividades." target="_blank" class="btn-saiba-mais">SAIBA MAIS</a>
                 </div>
               </div>
@@ -1376,7 +1400,7 @@
           <div class="ul-section-heading text-center justify-content-center" style="margin-bottom:40px;">
             <div>
               <h2 class="ul-section-title" style="color:#1a1a2e;">Condições exclusivas para conveniados</h2>
-              <p style="color:#666;max-width:580px;margin:14px auto 0;font-size:16px;">Funcionários e associados das empresas parceiras têm desconto de 35% na mensalidade para 2027. Consulte-nos!</p>
+              <p style="color:#666;max-width:580px;margin:14px auto 0;font-size:16px;">Funcionários e associados das empresas parceiras têm desconto de 25% na mensalidade para 2027. Consulte-nos!</p>
             </div>
           </div>
           <div class="row gy-4 justify-content-center">
